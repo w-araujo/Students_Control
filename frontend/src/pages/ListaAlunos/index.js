@@ -50,7 +50,7 @@ export default function ListaAlunos() {
                         </li>
                         <li>
                             <Link to="/alunos">
-                                listagem de alunos
+                                Listagem de alunos
                          </Link>
                         </li>
                     </ul>
@@ -66,9 +66,11 @@ export default function ListaAlunos() {
                             <strong>Ultimo Nome:</strong>
                             <p>{alunos.lastname}</p>
                             <strong>Idade:</strong>
-                            <p>{alunos.idade}</p>
+                            <p>{alunos.age}</p>
+                            <strong>Email:</strong>
+                            <p>{alunos.email}</p>
                             <strong>Endereço:</strong>
-                            <p>{alunos.endereco}</p>
+                            <p>{alunos.address}</p>
 
                             <Link onClick={() => handleDelete(alunos.id)} to="/alunos">
                                 <RiDeleteBinLine style={{ width: 18, height: 30 }} />

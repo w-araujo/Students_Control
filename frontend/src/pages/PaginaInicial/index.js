@@ -31,7 +31,7 @@ export default function PaginaInicial() {
                         </li>
                         <li>
                             <Link to="/alunos">
-                                listagem de alunos
+                                Listagem de alunos
                          </Link>
                         </li>
                     </ul>

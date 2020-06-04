@@ -9,8 +9,9 @@ import './styles.css';
 export default function Cadastro() {
     const [name, setName] = useState('');
     const [lastname, setLastname] = useState('');
-    const [idade, setIdade] = useState('');
-    const [endereco, setEndereco] = useState('');
+    const [age, setAge] = useState('');
+    const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
 
     const history = useHistory();
 
@@ -19,18 +20,19 @@ export default function Cadastro() {
         const data = {
             name,
             lastname,
-            idade,
-            endereco
+            age,
+            email,
+            address
         }
 
         try {
-            const response = await api.post('students', data);
+            await api.post('students', data);
 
-            alert(`Login de acesso: ${response.data.Login}`);
+            alert('Cadastrado com sucesso');
 
             history.push('/cadastro');
         } catch (err) {
-            alert('Erro no cadastro, tente novamente.')
+            alert('Erro no cadastro, tente novamente.');
         }
     }
 
@@ -57,7 +59,7 @@ export default function Cadastro() {
                         </li>
                         <li>
                             <Link to="/alunos">
-                                listagem de alunos
+                                Listagem de alunos
                          </Link>
                         </li>
                     </ul>
@@ -82,14 +84,20 @@ export default function Cadastro() {
                     <input
                         type="number"
                         placeholder="Idade"
-                        value={idade}
-                        onChange={e => setIdade(e.target.value)} />
+                        value={age}
+                        onChange={e => setAge(e.target.value)} />
+
+                    <input
+                        type="text"
+                        placeholder="Email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)} />
 
                     <input
                         type="text"
                         placeholder="Endereço"
-                        value={endereco}
-                        onChange={e => setEndereco(e.target.value)} />
+                        value={address}
+                        onChange={e => setAddress(e.target.value)} />
 
                     <button type="submit">Ok</button>
                     <Link to="/">
