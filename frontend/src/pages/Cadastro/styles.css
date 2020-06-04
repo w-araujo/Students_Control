@@ -1,0 +1,23 @@
+.container-cadastro section {
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.container-cadastro section input {
+    margin-bottom: 10px;
+    font-size: 19px;
+    border: 2px #f0f0f4 ;
+    border-radius: 15px;
+}
+
+.container-cadastro section button {
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    
+}

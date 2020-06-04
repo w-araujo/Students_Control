@@ -1,0 +1,30 @@
+.container-paginaInicial {
+    text-align: center;
+}
+
+.container-paginaInicial section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 407px;
+}
+
+.container-paginaInicial section img{
+    width: 500px;
+    height: auto;
+}
+
+.container-paginaInicial strong {
+
+    color: green;
+    
+}
+
+
+.container-paginaInicial footer {
+    font-weight: bold;
+line-height: 0;
+    background: #7192AD;
+    padding: 60px;
+   
+}
